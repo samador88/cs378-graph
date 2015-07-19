@@ -27,11 +27,13 @@ class Graph {
         // --------
 
         typedef int vertex_descriptor;  // fix!
-        typedef int edge_descriptor;    // fix!
+        typedef std::pair<vertex_descriptor, vertex_descriptor> edge_descriptor;    // fix!
 
-        typedef int* vertex_iterator;    // fix!
-        typedef int* edge_iterator;      // fix!
-        typedef int* adjacency_iterator; // fix!
+        typedef std::vector<vertex_descriptor>::iterator vertex_iterator;    // fix!
+        typedef std::set<edge_descriptor>::iterator edge_iterator;      // fix!
+        typedef std::vector<vertex_descriptor>::iterator adjacency_iterator; // fix!
+        typedef std::set<edge_descriptor>     set_type;
+        typedef set_type::iterator            siterator;
 
         typedef std::size_t vertices_size_type;
         typedef std::size_t edges_size_type;
@@ -44,11 +46,17 @@ class Graph {
         /**
          * <your documentation>
          */
-        friend std::pair<edge_descriptor, bool> add_edge (vertex_descriptor, vertex_descriptor, Graph&) {
-            // <your code>
-            edge_descriptor ed = 0;
-            bool            b  = false;
-            return std::make_pair(ed, b);}
+        friend std::pair<edge_descriptor, bool> add_edge (vertex_descriptor v1, vertex_descriptor v2, Graph& g) {
+            // create edge descriptor
+            edge_descriptor x = std::make_pair(v1, v2);
+            pair<siterator, bool> p = e.insert(x);
+
+            
+            bool            b  = p.second;
+
+            if(b)
+                g[v1].push_back(v2);
+            return std::make_pair(x, b);}
 
         // ----------
         // add_vertex
@@ -57,9 +65,11 @@ class Graph {
         /**
          * <your documentation>
          */
-        friend vertex_descriptor add_vertex (Graph&) {
-            // <your code>
-            vertex_descriptor v = 0; // fix
+        friend vertex_descriptor add_vertex (Graph& g) {
+            std::vector<vertex_descriptor> x;
+            g.push_back(x);
+            vertex_descriptor v =(g.size()-1);
+            vertices_list.push_back(v);
             return v;}
 
         // -----------------
@@ -69,11 +79,9 @@ class Graph {
         /**
          * <your documentation>
          */
-        friend std::pair<adjacency_iterator, adjacency_iterator> adjacent_vertices (vertex_descriptor, const Graph&) {
-            // <your code>
-            static int a [] = {0, 0};     // dummy data
-            adjacency_iterator b = a;
-            adjacency_iterator e = a + 2;
+        friend std::pair<adjacency_iterator, adjacency_iterator> adjacent_vertices (vertex_descriptor v, const Graph& g) {
+            adjacency_iterator b = g[v].begin();
+            adjacency_iterator e = g[v].end();
             return std::make_pair(b, e);}
 
         // ----
@@ -183,6 +191,8 @@ class Graph {
         // ----
 
         std::vector< std::vector<vertex_descriptor> > g; // something like this
+        set<edge_descriptor> e;
+        vector<vertex_descriptor> vertcies_list;
 
         // -----
         // valid
