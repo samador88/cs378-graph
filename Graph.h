@@ -26,12 +26,12 @@ class Graph {
         // typedefs
         // --------
 
-        typedef int vertex_descriptor;  // fix!
-        typedef std::pair<vertex_descriptor, vertex_descriptor> edge_descriptor;    // fix!
+        typedef int vertex_descriptor;  
+        typedef std::pair<vertex_descriptor, vertex_descriptor> edge_descriptor;    
 
-        typedef std::vector<vertex_descriptor>::const_iterator vertex_iterator;    // fix!
-        typedef std::set<edge_descriptor>::const_iterator edge_iterator;      // fix!
-        typedef std::vector<vertex_descriptor>::const_iterator adjacency_iterator; // fix!
+        typedef std::vector<vertex_descriptor>::const_iterator vertex_iterator;    
+        typedef std::set<edge_descriptor>::const_iterator edge_iterator;      
+        typedef std::vector<vertex_descriptor>::const_iterator adjacency_iterator; 
         typedef std::set<edge_descriptor>     set_type;
         typedef set_type::iterator            siterator;
 
@@ -185,7 +185,7 @@ class Graph {
 
 
 
-            vertex_descriptor vd = g._vertices_list[v-1]; // fix
+            vertex_descriptor vd = g._vertices_list[v]; // fix
             return vd;}
 
         // --------
@@ -207,7 +207,7 @@ class Graph {
         // data
         // ----
 
-        std::vector< std::vector<vertex_descriptor> > _g; // something like this
+        std::vector< std::vector<vertex_descriptor> > _g; 
         std::set<edge_descriptor> _e;
         std::vector<vertex_descriptor> _vertices_list;
 
@@ -220,7 +220,9 @@ class Graph {
          */
         bool valid () const {
             // <your code>
-            return true;}
+
+
+            return _g.size() >=0 && _e.size() >= 0  && _vertices_list.size() >= 0 && _g.size() == _vertices_list.size();}
 
     public:
         // ------------
