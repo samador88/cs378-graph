@@ -1,7 +1,7 @@
 *.g*
 !.gitignore
 latex/
-deque-tests/
+graph-tests/
 .DS_Store
 Doxyfile
-TestDeque
+TestGraph
