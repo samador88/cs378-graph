@@ -54,7 +54,7 @@ typedef Types<
 
 TYPED_TEST_CASE(TestGraph, graph_types);
 
-/*TYPED_TEST(TestGraph, test_vertex) {
+TYPED_TEST(TestGraph, test_vertex) {
     typedef typename TestFixture::graph_type         graph_type;
     typedef typename TestFixture::vertex_descriptor  vertex_descriptor;
     typedef typename TestFixture::edge_descriptor    edge_descriptor;
@@ -167,7 +167,7 @@ TYPED_TEST(TestGraph, test_edges) {
         ASSERT_EQ(edAC, ed);}
     ++b;
     ASSERT_EQ(e, b);}
-*/
+
 TYPED_TEST(TestGraph, test_adjacent_vertices) {
     typedef typename TestFixture::graph_type         graph_type;
     typedef typename TestFixture::vertex_descriptor  vertex_descriptor;
