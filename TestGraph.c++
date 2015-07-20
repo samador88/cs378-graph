@@ -1154,7 +1154,7 @@ TYPED_TEST(TestGraph, edges1) {
     vertex_descriptor vdF = add_vertex(g);
     vertex_descriptor vdG = add_vertex(g);
     vertex_descriptor vdH = add_vertex(g);
-    vertex_descriptor vdI = add_vertex(g);
 
 
-    ASSERT_EQ(9, num_vertices(g));}
+
+    ASSERT_EQ(8, num_vertices(g));}
