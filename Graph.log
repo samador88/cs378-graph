@@ -1,0 +1,109 @@
+commit d897242def82b03d6c56121b09844aa7045ffb9a
+Merge: 4008357 a67b22e
+Author: jsalazar <jsalazar@cs.utexas.edu>
+Date:   Mon Jul 20 18:03:38 2015 -0500
+
+    deleted testgraph.out
+
+commit a67b22ea708eec70d39b2330a58e2b8784cefc2c
+Author: jsalazar <jsalazar@cs.utexas.edu>
+Date:   Mon Jul 20 18:00:09 2015 -0500
+
+    ran others tests.  all passed.  closes #9, closes #10, closes #16, closes #17, closes #23
+
+commit 4941b77a40b756fb384bfa790ac44286376a442b
+Author: jsalazar <jsalazar@cs.utexas.edu>
+Date:   Mon Jul 20 17:40:25 2015 -0500
+
+    fixed vertex, adjacent verticies, and add edge.  closes #19, closes #20, closes #21, closes #22
+
+commit 40083578d808d8d697adab52d651d8ac5a76472c
+Author: jsalazar <jsalazar@cs.utexas.edu>
+Date:   Mon Jul 20 14:42:22 2015 -0500
+
+    fixed num vertex.  closes #18, closes #15, closes #7
+
+commit 2ae0a07468f8fb6d4073549d5772151e308652ba
+Merge: 924cb67 d80d24d
+Author: jsalazar <jsalazar@cs.utexas.edu>
+Date:   Mon Jul 20 14:37:44 2015 -0500
+
+    Merge branch 'dev'
+
+commit d80d24dc17b2d49cd88bfef918a88db3c7bc4c29
+Author: jsalazar <jsalazar@cs.utexas.edu>
+Date:   Mon Jul 20 14:35:22 2015 -0500
+
+    cleared warnings from all test
+
+commit 9b07ac84e46a0c1b75758d525343410f6af59d59
+Author: jsalazar <jsalazar@cs.utexas.edu>
+Date:   Mon Jul 20 14:19:45 2015 -0500
+
+    added test for num edge and num vertices
+
+commit 5ac61a61a1b653b3653f61127526f44992ca93b4
+Author: jsalazar <jsalazar@cs.utexas.edu>
+Date:   Mon Jul 20 14:13:30 2015 -0500
+
+    added edges and edge test
+
+commit 52f1d400a86c0a86c0d3298eeac3abf9aa5f644b
+Author: Samantha Amador <sa4265@cs.utexas.edu>
+Date:   Mon Jul 20 02:15:04 2015 -0500
+
+    added unit tests for source, target, vertex, and vertices
+
+commit 61a444300c6147db6ef5b7f7ddf597f208669417
+Author: Samantha Amador <sa4265@cs.utexas.edu>
+Date:   Sun Jul 19 17:40:25 2015 -0500
+
+    created unit test for add edge, add vertex, and adj. verticies. closes #6, closes #8
+
+commit 678e925263944428d9264645fc8d8c9946366d9c
+Author: Samantha Amador <sa4265@cs.utexas.edu>
+Date:   Sun Jul 19 16:17:24 2015 -0500
+
+    ran all tests
+
+commit 02a55863c39a793a3ad6b9ae380a8f97ddc77e2d
+Author: Samantha Amador <sa4265@cs.utexas.edu>
+Date:   Sun Jul 19 15:40:45 2015 -0500
+
+    tested adjacent_verticies and passed
+
+commit 5d37e969f71077313be3adabb7c41256eba4330f
+Author: Samantha Amador <sa4265@cs.utexas.edu>
+Date:   Sun Jul 19 15:23:08 2015 -0500
+
+    added functions for add vertex, add edge, and adjacent vertices
+
+commit 28e880be4f49db810ed39223f54ef5b6b0d840b4
+Author: jrsalazar <jsalazar@cs.utexas.edu>
+Date:   Sun Jul 19 13:44:18 2015 -0500
+
+    Update .gitignore
+
+commit 072a975a171727e6636b45eb7a2331d6163b443a
+Author: jsalazar <jsalazar@cs.utexas.edu>
+Date:   Sun Jul 19 13:43:29 2015 -0500
+
+    added git ignore
+
+commit c10aed06ebd0dc961846669148adcbee213b4505
+Author: jsalazar <jsalazar@cs.utexas.edu>
+Date:   Sun Jul 19 13:40:34 2015 -0500
+
+    added files
+
+commit 924cb671229628b5af2687252fc7735c40f596e9
+Author: jsalazar <jsalazar@cs.utexas.edu>
+Date:   Sun Jul 19 13:39:23 2015 -0500
+
+    created makefile, gitignore, and travis.yml Closes #4, closes #5
+
+commit 713d4b8b6a53bae4797081938988da0ee7239899
+Author: samador88 <samador@utexas.edu>
+Date:   Sun Jul 19 13:16:02 2015 -0500
+
+    Initial commit
