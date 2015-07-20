@@ -31,7 +31,7 @@ class Graph {
 
         typedef std::vector<vertex_descriptor>::const_iterator vertex_iterator;    
         typedef std::set<edge_descriptor>::const_iterator edge_iterator;      
-        typedef std::vector<vertex_descriptor>::const_iterator adjacency_iterator; 
+        typedef std::set<vertex_descriptor>::const_iterator adjacency_iterator; 
         typedef std::set<edge_descriptor>     set_type;
         typedef set_type::iterator            siterator;
 
@@ -54,8 +54,14 @@ class Graph {
             
             bool            b  = p.second;
 
-            if(b)
-                g._g[v1].push_back(v2);
+            if(b){
+                while(std::max(v1, v2) >= (int) g._g.size()){
+                    add_vertex(g);
+                }
+                
+                g._g[v1].insert(v2);
+            }
+                
             return std::make_pair(x, b);}
 
         // ----------
@@ -66,7 +72,7 @@ class Graph {
          * <your documentation>
          */
         friend vertex_descriptor add_vertex (Graph& g) {
-            std::vector<vertex_descriptor> x;
+            std::set<vertex_descriptor> x;
             g._g.push_back(x);
             vertex_descriptor v =(g._g.size()-1);
             g._vertices_list.push_back(v);
@@ -185,7 +191,7 @@ class Graph {
 
 
 
-            vertex_descriptor vd = g._vertices_list[v]; // fix
+            vertex_descriptor vd = v;
             return vd;}
 
         // --------
@@ -207,7 +213,7 @@ class Graph {
         // data
         // ----
 
-        std::vector< std::vector<vertex_descriptor> > _g; 
+        std::vector< std::set<vertex_descriptor> > _g; 
         std::set<edge_descriptor> _e;
         std::vector<vertex_descriptor> _vertices_list;
 
